@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "{{ .Env.POSH_LAST_COMMAND }}",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#D75F00",
+          "style": "plain",
+          "template": "λ <#fff>\u279c</> ",
+          "type": "text"
+        },
+        {
+          "foreground": "#87FF00",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "{{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "#4B8BBE",
+          "properties": {
+            "display_mode": "files",
+            "fetch_virtual_env": false
+          },
+          "style": "powerline",
+          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "python"
+        },
+        {
+          "foreground": "#5FD7FF",
+          "properties": {
+            "fetch_status": true
+          },
+          "style": "plain",
+          "template": "<#ffffff>on</> {{ .HEAD }}{{ if .Staging.Changed }}<#87FF00> \u25cf {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#5FD7FF> \u25cf {{ .Working.String }}</>{{ end }} ",
+          "type": "git"
+        },
+        {
+          "foreground": "#fff",
+          "style": "plain",
+          "template": "$ ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}

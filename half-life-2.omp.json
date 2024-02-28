@@ -14,6 +14,7 @@
         {
           "foreground": "#87FF00",
           "properties": {
+            "folder_separator_icon": "/",
             "style": "full"
           },
           "style": "plain",
@@ -27,7 +28,7 @@
             "fetch_virtual_env": false
           },
           "style": "powerline",
-          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} ",
           "type": "python"
         },
         {

@@ -8,7 +8,7 @@
         {
           "foreground": "#D75F00",
           "style": "plain",
-          "template": "λ <#fff>\u279c</> ",
+          "template": "λ <#fff>\u279c</>  ",
           "type": "text"
         },
         {
